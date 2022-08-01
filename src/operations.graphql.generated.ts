@@ -60,6 +60,17 @@ export function RecordInputSchema(): z.ZodObject<Properties<RecordInput>> {
   });
 }
 
+export function RecordMutationVariablesSchema(): z.ZodObject<
+  Properties<{ recordID: string; record: RecordInput }>
+> {
+  return z.object({
+    recordID: z.string(),
+    record: z.object({
+      foo: z.string(),
+    }),
+  });
+}
+
 export type SaveMutationVariables = Exact<{
   recordID: Scalars["String"];
   record: RecordInput;
@@ -70,5 +81,13 @@ export type SaveMutation = { readonly save: boolean };
 export type QueryQueryVariables = Exact<{
   search: Scalars["String"];
 }>;
+
+export function QueryQueryVariablesSchema(): z.ZodObject<
+  Properties<QueryQueryVariables>
+> {
+  return z.object({
+    search: z.string(),
+  });
+}
 
 export type QueryQuery = { readonly query: ReadonlyArray<string> };
