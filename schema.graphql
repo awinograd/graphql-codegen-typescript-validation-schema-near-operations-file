@@ -1,24 +1,11 @@
-input FooInput {
+input RecordInput {
   foo: String!
 }
 
-type FooPayload {
-  field: String!
-}
-
-input BarInput {
-  bar: String!
-}
-
-type BarPayload {
-  field: String!
-}
-
 type Mutation {
-  foo(input: FooInput!): FooPayload!
-  bar(input: BarInput!): BarPayload!
+  save(recordID: String!, record: RecordInput!): Boolean!
 }
 
 type Query {
-  query: String
+  query(search: String!): [String!]!
 }

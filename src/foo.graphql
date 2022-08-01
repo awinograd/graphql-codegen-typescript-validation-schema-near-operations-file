@@ -1,5 +1,0 @@
-mutation Foo($input: FooInput!) {
-  foo(input: $input) {
-    field
-  }
-}

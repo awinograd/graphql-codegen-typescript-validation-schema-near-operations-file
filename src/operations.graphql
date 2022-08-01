@@ -1,0 +1,7 @@
+mutation Save($recordID: String!, $record: RecordInput!) {
+  save(recordID: $recordID, record: $record)
+}
+
+query Query($search: String!) {
+  query(search: $search)
+}
