@@ -2,7 +2,7 @@
 import type * as Types from "./types.graphql.generated";
 
 import { z } from "zod";
-import { BarInput, FooInput } from "./types.graphql.generated";
+import { FooInput } from "./types.graphql.generated";
 
 type Properties<T> = Required<{
   [K in keyof T]: z.ZodType<T[K], any, T[K]>;
@@ -16,12 +16,6 @@ export const isDefinedNonNullAny = (v: any): v is definedNonNullAny =>
 export const definedNonNullAnySchema = z
   .any()
   .refine((v) => isDefinedNonNullAny(v));
-
-export function BarInputSchema(): z.ZodObject<Properties<BarInput>> {
-  return z.object({
-    bar: z.string(),
-  });
-}
 
 export function FooInputSchema(): z.ZodObject<Properties<FooInput>> {
   return z.object({
