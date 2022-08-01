@@ -1,0 +1,18 @@
+{
+  "name": "near-operations-file-repro",
+  "scripts": {
+    "gqlcodegen": "graphql-codegen --config gqlcodegen.yml"
+  },
+  "dependencies": {
+    "@graphql-codegen/cli": "^2.0.0",
+    "@graphql-codegen/fragment-matcher": "^3.0.0",
+    "@graphql-codegen/introspection": "^2.0.0",
+    "@graphql-codegen/named-operations-object": "^2.0.0",
+    "@graphql-codegen/near-operation-file-preset": "^2.0.0",
+    "@graphql-codegen/typescript": "^2.0.0",
+    "@graphql-codegen/typescript-operations": "^2.0.0",
+    "graphql-codegen-typescript-validation-schema": "^0.6.0",
+    "prettier": "^2.3.2",
+    "typescript": "~4.6.0"
+  }
+}

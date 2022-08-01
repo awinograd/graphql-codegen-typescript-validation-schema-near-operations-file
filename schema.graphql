@@ -1,0 +1,22 @@
+input FooInput {
+  foo: String!
+}
+
+type FooPayload {
+  field: String!
+}
+
+input BarInput {
+  bar: String!
+}
+
+type BarPayload {
+  field: String!
+}
+
+type Mutation {
+  foo(input: FooInput!): FooPayload!
+  bar(input: BarInput!): BarPayload!
+}
+
+type Query {}
