@@ -1,4 +1,4 @@
-mutation Foo($input: Input!) {
+mutation Foo($input: FooInput!) {
   foo(input: $input) {
     field
   }

@@ -1,0 +1,5 @@
+mutation Bar($input: BarInput!) {
+  bar(input: $input) {
+    field
+  }
+}
